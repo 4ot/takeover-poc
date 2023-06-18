@@ -1,0 +1,7 @@
+const express = require('express')
+const appHTTPS = express()
+const appHTTP = express()
+appHTTPS.get('/5UvRknrxT3ito7hCHMhaTD3s3UG5Dd', (req, res) => res.json({message: 'gopuff security team poc'}))
+appHTTP.get('/5UvRknrxT3ito7hCHMhaTD3s3UG5Dd', (req, res) => res.json({message: 'gopuff security team poc'}))
+appHTTPS.listen(443)
+appHTTP.listen(80)
