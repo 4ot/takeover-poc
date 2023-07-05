@@ -1,7 +1,6 @@
-const express = require('express')
-const appHTTPS = express()
-const appHTTP = express()
-appHTTPS.get('/5UvRknrxT3ito7hCHMhaTD3s3UG5Dd', (req, res) => res.json({message: 'gopuff security team poc'}))
-appHTTP.get('/5UvRknrxT3ito7hCHMhaTD3s3UG5Dd', (req, res) => res.json({message: 'gopuff security team poc'}))
-appHTTPS.listen(443)
-appHTTP.listen(80)
+ var http = require('http')
+ var port = process.env.PORT || 1337;
+ http.createServer(function(req, res) {
+   res.writeHead(200, { 'Content-Type': 'text/plain' });
+   res.end('Hello World\n');
+ }).listen(port);
